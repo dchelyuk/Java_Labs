@@ -8,8 +8,8 @@ public class Main {
                 20, 5, 20, 15.00);
         Drug drug3 = new Drug("Validol", 50, 400, "Validol",
                 10, 24, 5, 7.50);
-        System.out.println(drug1.pill_price);
-        System.out.println(drug2.pill_price);
-        System.out.println(drug3.pill_price);
+        System.out.println(drug1);
+        System.out.println(drug2);
+        System.out.println(drug3);
     }
 }

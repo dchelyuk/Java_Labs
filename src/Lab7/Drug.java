@@ -30,6 +30,16 @@ public class Drug {
         this.weight_in_mg = weight_in_mg;
         this.active_substance_name = active_substance_name;
         this.max_doses_per_day = max_doses_per_day;
+    }
 
+    public String toString() {
+        return "Release Year: " + this.release_year + "\nName: " + this.name
+                + "\nVolume of active substance: " + this.volume_of_active_substance
+                + "\nWeight in mg: " + this.weight_in_mg
+                + "\nActive substance name: " + this.active_substance_name
+                + "\nMaximum doses per day: " + this.max_doses_per_day
+                + "\nDrug duration: " + this.duration + "\nCount in package: " + this.count_in_package
+                + "\nPackage price: " + package_price + "\nPrice for 1 pill: " + this.pill_price
+                + "\n--------------------------------\n";
     }
 }
