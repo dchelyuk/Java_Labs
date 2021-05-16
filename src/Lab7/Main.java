@@ -13,6 +13,7 @@ public class Main {
         System.out.println(drug3);
 
         Drug.printStaticReleaseYear();
+        drug1.printReleaseYear();
 
         drug1.setCountInPackage(11);
         System.out.println(drug1.getCountInPackage());

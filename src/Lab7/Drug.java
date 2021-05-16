@@ -6,8 +6,8 @@ public class Drug {
     private String name;
     int volumeOfOperativeSubstance;
     int weightInMg;
-    String operativeSubstanceName;
-    int maxDosesPerDay;
+    protected String operativeSubstanceName;
+    protected int maxDosesPerDay;
     private double durationInHours;
     private int countInPackage;
     private double packagePrice;
@@ -34,7 +34,11 @@ public class Drug {
     }
 
     public static void printStaticReleaseYear() {
-        System.out.println("Release year: " + releaseYear);
+        System.out.println("Release year: " + Drug.releaseYear + "\n");
+    }
+
+    public void printReleaseYear() {
+        System.out.println("Release year: " + Drug.releaseYear + "\n");
     }
 
     public String getName() {
