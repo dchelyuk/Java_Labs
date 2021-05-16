@@ -1,45 +1,92 @@
 package Lab7;
 
 public class Drug {
-    static int release_year = 2021;
+    static int releaseYear = 2021;
 
-    String name;
-    int volume_of_active_substance;
-    int weight_in_mg;
-    String active_substance_name;
-    int max_doses_per_day;
-    double duration;
-    int count_in_package;
-    double package_price;
-    double pill_price;
+    private String name;
+    int volumeOfOperativeSubstance;
+    int weightInMg;
+    String operativeSubstanceName;
+    int maxDosesPerDay;
+    private double durationInHours;
+    private int countInPackage;
+    private double packagePrice;
+    private double pillPrice;
 
-    Drug() {}
+    Drug() {
+    }
 
-    Drug(String name, double duration, int count_in_package, double package_price) {
+    Drug(String name, double durationInHours, int countInPackage, double packagePrice) {
+        this.setName(name);
+        this.setDurationInHours(durationInHours);
+        this.setCountInPackage(countInPackage);
+        this.setPackagePrice(packagePrice);
+        this.setPillPrice();
+    }
+
+    Drug(String name, int volumeOfOperativeSubstance, int weightInMg, String operativeSubstanceName,
+         int maxDosesPerDay, double durationInHours, int countInPackage, double packagePrice) {
+        this(name, durationInHours, countInPackage, packagePrice);
+        this.volumeOfOperativeSubstance = volumeOfOperativeSubstance;
+        this.weightInMg = weightInMg;
+        this.operativeSubstanceName = operativeSubstanceName;
+        this.maxDosesPerDay = maxDosesPerDay;
+    }
+
+    public static void printStaticReleaseYear() {
+        System.out.println("Release year: " + releaseYear);
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
         this.name = name;
-        this.duration = duration;
-        this.count_in_package = count_in_package;
-        this.package_price = package_price;
-        this.pill_price = package_price / count_in_package;
     }
 
-    Drug(String name, int volume_of_active_substance, int weight_in_mg, String active_substance_name,
-         int max_doses_per_day, double duration, int count_in_package, double package_price) {
-        this(name, duration, count_in_package, package_price);
-        this.volume_of_active_substance = volume_of_active_substance;
-        this.weight_in_mg = weight_in_mg;
-        this.active_substance_name = active_substance_name;
-        this.max_doses_per_day = max_doses_per_day;
+    public double getDurationInHours() {
+        return this.durationInHours;
     }
 
+    public void setDurationInHours(double durationInHours) {
+        this.durationInHours = durationInHours;
+    }
+
+    public int getCountInPackage() {
+        return this.countInPackage;
+    }
+
+    public void setCountInPackage(int countInPackage) {
+        this.countInPackage = countInPackage;
+        this.setPillPrice();
+    }
+
+    public double getPackagePrice() {
+        return this.packagePrice;
+    }
+
+    public void setPackagePrice(double packagePrice) {
+        this.packagePrice = packagePrice;
+        this.setPillPrice();
+    }
+
+    public double getPillPrice() {
+        return this.pillPrice;
+    }
+
+    public void setPillPrice() {
+        this.pillPrice = this.packagePrice / this.countInPackage;
+    }
+
+    @Override
     public String toString() {
-        return "Release Year: " + release_year + "\nName: " + this.name
-                + "\nVolume of active substance: " + this.volume_of_active_substance
-                + "\nWeight in mg: " + this.weight_in_mg
-                + "\nActive substance name: " + this.active_substance_name
-                + "\nMaximum doses per day: " + this.max_doses_per_day
-                + "\nDrug duration: " + this.duration + "\nCount in package: " + this.count_in_package
-                + "\nPackage price: " + package_price + "\nPrice for 1 pill: " + this.pill_price
-                + "\n--------------------------------\n";
+        return "Release Year: " + Drug.releaseYear + "\nName: " + this.name
+                + "\nVolume of operative substance: " + this.volumeOfOperativeSubstance
+                + "\nWeight in mg: " + this.weightInMg + "\nActive substance name: " + this.operativeSubstanceName
+                + "\nMaximum doses per day: " + this.maxDosesPerDay
+                + "\nDrug duration in hours: " + this.durationInHours + "\nCount in package: " + this.countInPackage
+                + "\nPackage price: " + packagePrice + "\nPrice for 1 pill: " + this.pillPrice
+                + "\n-------------------------------\n";
     }
 }

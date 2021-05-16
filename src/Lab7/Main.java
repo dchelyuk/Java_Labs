@@ -11,5 +11,21 @@ public class Main {
         System.out.println(drug1);
         System.out.println(drug2);
         System.out.println(drug3);
+
+        Drug.printStaticReleaseYear();
+
+        drug1.setCountInPackage(11);
+        System.out.println(drug1.getCountInPackage());
+
+        drug2.setName("Nurofen2");
+        System.out.println(drug2.getName());
+
+        drug3.setDurationInHours(12.5);
+        System.out.println(drug3.getDurationInHours());
+
+        drug1.setPackagePrice(7.50);
+        System.out.println(drug1.getPackagePrice());
+        System.out.println(drug1.getPillPrice());
+
     }
 }
