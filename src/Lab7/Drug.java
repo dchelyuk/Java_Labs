@@ -1,7 +1,7 @@
 package Lab7;
 
 public class Drug {
-    int release_year = 2021;
+    static int release_year = 2021;
 
     String name;
     int volume_of_active_substance;
@@ -33,7 +33,7 @@ public class Drug {
     }
 
     public String toString() {
-        return "Release Year: " + this.release_year + "\nName: " + this.name
+        return "Release Year: " + release_year + "\nName: " + this.name
                 + "\nVolume of active substance: " + this.volume_of_active_substance
                 + "\nWeight in mg: " + this.weight_in_mg
                 + "\nActive substance name: " + this.active_substance_name
