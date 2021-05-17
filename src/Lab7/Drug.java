@@ -83,6 +83,19 @@ public class Drug {
         this.pillPrice = this.packagePrice / this.countInPackage;
     }
 
+    public void resetValues(String name, int volumeOfOperativeSubstance, int weightInMg, String operativeSubstanceName,
+                            int maxDosesPerDay, double durationInHours, int countInPackage, double packagePrice) {
+        this.setName(name);
+        this.volumeOfOperativeSubstance = volumeOfOperativeSubstance;
+        this.weightInMg = weightInMg;
+        this.operativeSubstanceName = operativeSubstanceName;
+        this.maxDosesPerDay = maxDosesPerDay;
+        this.setDurationInHours(durationInHours);
+        this.setCountInPackage(countInPackage);
+        this.setPackagePrice(packagePrice);
+        this.setPillPrice();
+    }
+
     @Override
     public String toString() {
         return "Release Year: " + Drug.releaseYear + "\nName: " + this.name

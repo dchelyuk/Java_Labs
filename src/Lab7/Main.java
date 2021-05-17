@@ -26,7 +26,10 @@ public class Main {
 
         drug1.setPackagePrice(7.50);
         System.out.println(drug1.getPackagePrice());
-        System.out.println(drug1.getPillPrice());
+        System.out.println(drug1.getPillPrice() + "\n");
 
+        drug3.resetValues("Validolium", 55, 450, "Validolus",
+                5, 48, 10, 27.50);
+        System.out.println(drug3);
     }
 }
