@@ -4,7 +4,6 @@ import com.shops.dishwarestore.enums.Category;
 import com.shops.dishwarestore.enums.Country;
 import com.shops.dishwarestore.enums.Size;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 
 @AllArgsConstructor
 public class Cutlery extends Dish {
