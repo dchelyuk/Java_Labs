@@ -26,6 +26,6 @@ public class Fork extends Cutlery {
                 + "\nManufacturer: " + this.manufacturer + "\nCountry of origin: " + this.countryOrigin
                 + "\nBarcode: " + this.code + "\nCategory: " + this.category + "\nSize: " + this.size
                 + "\nPurpose: " + this.purpose
-                +"\n-------------------------------\n";
+                + "\n-------------------------------\n";
     }
 }

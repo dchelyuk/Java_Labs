@@ -30,6 +30,6 @@ public class Plate extends Dish {
                 + "\nBarcode: " + this.code + "\nCategory: " + this.category + "\nMaterials: " + this.materials
                 + "\nShape: " + this.shape + "\nDiameter in mm: " + this.diameterInMm
                 + "\n Colour: " + this.colour
-                +"\n-------------------------------\n";
+                + "\n-------------------------------\n";
     }
 }

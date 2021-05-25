@@ -5,7 +5,7 @@ import com.shops.dishwarestore.enums.Country;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class Dish extends DishwareItem{
+public class Dish extends DishwareItem {
     private String name;
     public double price;
     private double weightInG;
