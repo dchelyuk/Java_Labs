@@ -1,7 +1,6 @@
 package com.shops.dishwarestore.shopmanager;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -12,7 +11,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class ShopManager {
-    private List<DishwareItem> goods;
+    private final List<DishwareItem> goods;
 
     public List<DishwareItem> searchByCountry(Country searchedCountry) {
         List<DishwareItem> searchResult = new ArrayList<>();
