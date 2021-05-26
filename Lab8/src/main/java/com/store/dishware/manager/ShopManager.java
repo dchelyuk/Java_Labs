@@ -15,7 +15,6 @@ public class ShopManager {
     private final List<DishwareItem> goods;
 
     public List<DishwareItem> searchByCountry(Country searchedCountry) {
-        List<DishwareItem> searchResult = new ArrayList<>();
         return goods.stream().filter(item -> item.getCountryOrigin() == searchedCountry).collect(Collectors.toList());
     }
 
