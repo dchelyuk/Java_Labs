@@ -1,7 +1,9 @@
-package com.shops.dishwarestore.enums;
+package com.store.dishware.enums;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@Getter
 @AllArgsConstructor
 public enum Purpose {
     STARTERS(1),

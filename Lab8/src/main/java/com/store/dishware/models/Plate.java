@@ -1,14 +1,16 @@
-package com.shops.dishwarestore.dishwareitem;
+package com.store.dishware.models;
 
-import com.shops.dishwarestore.enums.Category;
-import com.shops.dishwarestore.enums.Country;
-import com.shops.dishwarestore.enums.Shape;
+import com.store.dishware.enums.Category;
+import com.store.dishware.enums.Country;
+import com.store.dishware.enums.Shape;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 public class Plate extends Dish {
     private String name;
@@ -26,10 +28,10 @@ public class Plate extends Dish {
     @Override
     public String toString() {
         return "Name: " + this.name + "\nPrice: " + this.price + "\nWeight in grams: " + this.weightInG
-                + "\nManufacturer: " + this.manufacturer + "\nCountry of origin: " + this.countryOrigin
-                + "\nBarcode: " + this.code + "\nCategory: " + this.category + "\nMaterials: " + this.materials
-                + "\nShape: " + this.shape + "\nDiameter in mm: " + this.diameterInMm
-                + "\n Colour: " + this.colour
+                + "\nManufacturer: " + this.manufacturer + "\nCountry of origin: " + this.countryOrigin.getCountry()
+                + "\nBarcode: " + this.code + "\nCategory: " + this.category.getCategoryName()
+                + "\nMaterials: " + this.materials + "\nShape: " + this.shape.getShape()
+                + "\nDiameter in mm: " + this.diameterInMm + "\n Colour: " + this.colour
                 + "\n-------------------------------\n";
     }
 }

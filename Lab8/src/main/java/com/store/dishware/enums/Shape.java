@@ -1,7 +1,9 @@
-package com.shops.dishwarestore.enums;
+package com.store.dishware.enums;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@Getter
 @AllArgsConstructor
 public enum Shape {
     ROUND("Round"),
@@ -10,5 +12,5 @@ public enum Shape {
     TRIANGULAR("Triangular"),
     OBLONG("Oblong");
 
-    String Shape;
+    String shape;
 }

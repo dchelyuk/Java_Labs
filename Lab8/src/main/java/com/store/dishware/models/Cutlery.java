@@ -1,12 +1,14 @@
-package com.shops.dishwarestore.dishwareitem;
+package com.store.dishware.models;
 
-import com.shops.dishwarestore.enums.Category;
-import com.shops.dishwarestore.enums.Country;
-import com.shops.dishwarestore.enums.Size;
+import com.store.dishware.enums.Category;
+import com.store.dishware.enums.Country;
+import com.store.dishware.enums.Size;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
-public class Cutlery extends Dish {
+@NoArgsConstructor
+public class Cutlery extends DishwareItem {
     private String name;
     public double price;
     private double weightInG;
@@ -16,7 +18,4 @@ public class Cutlery extends Dish {
     private Category category;
     private Size size;
 
-    Cutlery() {
-
-    }
 }

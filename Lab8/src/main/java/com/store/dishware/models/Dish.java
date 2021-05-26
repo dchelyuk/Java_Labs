@@ -1,10 +1,12 @@
-package com.shops.dishwarestore.dishwareitem;
+package com.store.dishware.models;
 
-import com.shops.dishwarestore.enums.Category;
-import com.shops.dishwarestore.enums.Country;
+import com.store.dishware.enums.Category;
+import com.store.dishware.enums.Country;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
+@NoArgsConstructor
 public class Dish extends DishwareItem {
     private String name;
     public double price;
@@ -15,7 +17,4 @@ public class Dish extends DishwareItem {
     private Category category;
     private Material[] materials;
 
-    Dish() {
-
-    }
 }
