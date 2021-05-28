@@ -1,5 +1,3 @@
-package Lab7;
-
 public class Drug {
     static int releaseYear = 2021;
 
