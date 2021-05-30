@@ -1,7 +1,5 @@
 package com.store.dishware.controller;
 
-import com.store.dishware.enums.Category;
-import com.store.dishware.enums.Country;
 import com.store.dishware.models.DishwareItem;
 import com.store.dishware.service.DishwareItemService;
 import org.springframework.beans.factory.annotation.Autowired;
