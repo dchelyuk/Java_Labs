@@ -5,8 +5,14 @@
 ## Lab #9: ##
     Creating Java REST-service for "DishwareItem" class
 
+#### (TASK REQUIREMENT): ####
+#### In order to see Lab №9, check directory "Lab8" in "lab9" branch: #### 
+
+[Lab 9 link](https://github.com/dchelyuk/Java_Labs/tree/lab9/Lab8)
+
 ### Rules:
-[Lab3 link](https://github.com/dchelyuk/Python_Labs/blob/master/Lab3)
+
+[Lab 3 link](https://github.com/dchelyuk/Python_Labs/blob/master/Lab3)
 
     1. Задачею 9 лабораторної є створити REST сервіс для одного з класів, створених у лабораторній роботі 3 (наприклад
         для класу Aligator з прикладу в лабораторній роботі 8  - AligatorController),  в котрому реалізовані
