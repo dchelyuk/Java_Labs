@@ -45,7 +45,7 @@
     Creating Java "DishwareItem" class hierarchy from Lab №2
 
 ### Rules: ###
-[Lab2 link](https://github.com/dchelyuk/Python_Labs/blob/master/Lab2/ClassDiagram_Programming_Danylo_Chelyuk_IoT-12.pdf)
+[Lab 2 link](https://github.com/dchelyuk/Python_Labs/blob/master/Lab2/ClassDiagram_Programming_Danylo_Chelyuk_IoT-12.pdf)
 
     1. Написати код до завдання з лабораторної №2 
     2. При записі програми потрібно використовувати домовленості щодо оформлення коду java code convention
@@ -106,13 +106,14 @@
 ## Lab #9: ##
     Creating Java REST-service for "DishwareItem" class
 
-#### In order to see Lab №9, check branch "lab9": #### 
+#### (TASK REQUIREMENT): ####
+#### In order to see Lab №9, check directory "Lab8" in "lab9" branch: #### 
 
-[Lab9 link](https://github.com/dchelyuk/Java_Labs/tree/lab9/Lab9)
+[Lab 9 link](https://github.com/dchelyuk/Java_Labs/tree/lab9/Lab8)
 
 ### Rules: ###
 
-[Lab3 link](https://github.com/dchelyuk/Python_Labs/blob/master/Lab3)
+[Lab 3 link](https://github.com/dchelyuk/Python_Labs/blob/master/Lab3)
 
     1. Задачею 9 лабораторної є створити REST сервіс для одного з класів, створених у лабораторній роботі 3 (наприклад
         для класу Aligator з прикладу в лабораторній роботі 8  - AligatorController),  в котрому реалізовані
