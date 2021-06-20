@@ -46,7 +46,7 @@ public class AppTests {
 
         App app = new App();
         String actualStr = app.repl(inputStr);
-        Boolean isPassed = actualStr.equals(expectedStr);
+        boolean isPassed = actualStr.equals(expectedStr);
         System.out.println("Input:    " + inputStr);
         System.out.println("Expected: " + expectedStr);
         System.out.println("Actual:   " + actualStr);
