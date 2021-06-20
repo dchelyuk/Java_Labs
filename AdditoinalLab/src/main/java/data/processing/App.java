@@ -5,8 +5,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class App {
+    public static void main(String[] args) {
+        System.out.println("Enter your line:");
+        Scanner input = new Scanner(System.in);
+        String line = input.nextLine();
+        System.out.println("You entered: " + line);
+        input.close();
+
+        App app = new App();
+        System.out.println("Result:      " +         app.repl(line));
+    }
     public String repl(String line) {
-        // public static void main(String[] args) {
         Map<Character, Character> dictionary = new HashMap<>();
         dictionary.put('1', 'A');
         dictionary.put('2', 'B');
@@ -18,22 +27,20 @@ public class App {
         dictionary.put('8', 'H');
         dictionary.put('9', 'I');
         dictionary.put('0', 'J');
-        // TODO: remove default line
-//        String line = "3;djskf 4jkg;lh5fljkd;r6;cv,bn,87kl;fg 599 ldj5 9 4fdgb;lkj";
 
         String reFirst = "^\\d\\D";
+        String reSingle = "^\\d$";
+        String reLast = "\\D\\d$";
         String re = "\\D\\d\\D";
-
-        System.out.println("Enter your line:");
-        System.out.println(line);
-
-        // Scanner input = new Scanner(System.in); TODO: uncomment input start
-        // String line = input.nextLine(); TODO: uncomment input scan
-        System.out.println("You entered: " + line);
-        // input.close(); TODO: uncomment input end
 
         Pattern firstPattern = Pattern.compile(reFirst);
         Matcher firstMatcher = firstPattern.matcher(line);
+
+        Pattern singlePattern = Pattern.compile(reSingle);
+        Matcher singleMatcher = singlePattern.matcher(line);
+
+        Pattern lastPattern = Pattern.compile(reLast);
+        Matcher lastMatcher = lastPattern.matcher(line);
 
         Pattern pattern = Pattern.compile(re);
         Matcher matcher = pattern.matcher(line);
@@ -43,13 +50,20 @@ public class App {
             result[0] = dictionary.get(result[0]);
         }
 
+        if (singleMatcher.find()) {
+            result[0] = dictionary.get(result[0]);
+        }
+
+        if (lastMatcher.find()) {
+            result[lastMatcher.start() + 1] = dictionary.get(result[lastMatcher.start() + 1]);
+        }
+
         int i = 0;
         while (matcher.find(i)) {
             result[matcher.start() + 1] = dictionary.get(result[matcher.start() + 1]);
             i = matcher.end() - 1;
         }
-        System.out.print("Result:      ");
-        System.out.println(result);
+
         return String.valueOf(result);
     }
 }
